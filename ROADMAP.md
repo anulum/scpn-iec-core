@@ -23,27 +23,31 @@ this repository until it appears in the capability inventory with evidence.
 - Local and workflow gate definitions (lint, typing, tests, coverage,
   REUSE, security audit, SBOM, documentation checks).
 
-## Planned (no implementation exists; ordering is not a commitment)
+- **Device configuration model** (landed 2026-08-31) — validated
+  confinement and drive objects for `gridded_iec` and `polywell` with
+  hard grid/virtual-cathode class invariants (grid transparency vs
+  polyhedral coil count), the ion-energy relation `E = e U`
+  (Hirsch 1967), an operating-voltage advisory, canonical digests, and
+  the SPO registry data pin; `computational_prototype` (ADR 0002,
+  `VALIDATION.md#device-configuration-model`). Well-depth envelopes and
+  discharge modes remain future work under the same capability.
 
-1. **Device configuration model** — typed configuration policy for the
-   IEC family (grid and virtual-cathode classes, well-depth envelopes,
-   discharge modes), with evidence-maturity target
-   `computational_prototype`.
-2. **Diagnostic and clock semantics** — declared well, convergence, and
+## Planned (no implementation exists; ordering is not a commitment)
+1. **Diagnostic and clock semantics** — declared well, convergence, and
    yield channels with continuous-operation clock identities, aligned
    with the SCPN Phase Orchestrator semantic profile.
-3. **Safety-envelope declaration** — machine-readable operational envelope
+2. **Safety-envelope declaration** — machine-readable operational envelope
    (voltage, thermal, magnet, shielding bounds) consumed by the CONTROL
    adapter contract.
-4. **CONTROL adapter implementation** — device-owned adapter against the
+3. **CONTROL adapter implementation** — device-owned adapter against the
    published specification, with replay fixtures and HIL evidence,
    targeting `control_research_ready` only after replay and HIL
    acceptance.
-5. **Solver seam consumption** — versioned consumption of exact
+4. **Solver seam consumption** — versioned consumption of exact
    `SCPN-FUSION-CORE` seams for potential-well and recirculation
    surfaces, strictly after the family migration gate proves exact
    replacement; no solver code is copied.
-6. **Facility-data correlation** — preregistered acceptance contracts
+5. **Facility-data correlation** — preregistered acceptance contracts
    against identified facility or published experimental data, targeting
    `experiment_correlated` per capability.
 
