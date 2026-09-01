@@ -8,6 +8,11 @@ Contact: www.anulum.li | protoscience@anulum.li
 SCPN IEC Core — README
 -->
 
+<div align="center">
+  <img src="docs/assets/repo_header.png"
+       alt="SCPN IEC Core — A Well Deep Enough To Fuse">
+</div>
+
 # SCPN IEC Core
 
 Governed device-family repository for inertial electrostatic confinement
