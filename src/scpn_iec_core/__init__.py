@@ -8,14 +8,15 @@
 
 """Device capability models of the SCPN IEC device family.
 
-Public surface of the ``device_configuration_model`` and
-``diagnostic_clock_semantics`` capabilities at
-``computational_prototype`` maturity: validated parameter objects,
-synthetic diagnostic and clock declarations aligned with the pinned SPO
-observability catalogue, documented consistency estimates, canonical
-serialisation with SHA-256 digests, and data-only pins to the SPO
-registries. No claim about any real machine or diagnostic is made
-anywhere in this package.
+Public surface of the ``device_configuration_model``,
+``diagnostic_clock_semantics`` and ``level0_device_physics``
+capabilities at ``computational_prototype`` maturity: validated
+parameter objects, synthetic diagnostic and clock declarations aligned
+with the pinned SPO observability catalogue, the published closed-form
+geometry of a spherical cathode grid evaluated on a declared grid,
+documented consistency estimates, canonical serialisation with SHA-256
+digests, and data-only pins to the SPO registries. No claim about any
+real machine or diagnostic is made anywhere in this package.
 """
 
 from __future__ import annotations
@@ -57,6 +58,27 @@ from scpn_iec_core.parameters import (
     ConfinementStructure,
     ElectrostaticDrive,
 )
+from scpn_iec_core.physics import (
+    LEVEL0_NON_CLAIMS,
+    LEVEL0_SCHEMA,
+    LEVEL0_SCHEMA_VERSION,
+    SYMMETRIC_GRIDS,
+    CathodeGridDeclaration,
+    Level0Physics,
+    OperatingPoint,
+    SymmetricGrid,
+    bridge_half_angle_rad,
+    circular_aperture_radius_m,
+    circular_transparency,
+    geometric_transparency,
+    globe_aperture_count,
+    level0_physics,
+    maximum_ion_passes,
+    normalised_circular_transparency,
+    spherical_cap_area_m2,
+    symmetric_grid,
+    symmetric_grid_aperture_angle_deg,
+)
 from scpn_iec_core.plan_envelope import (
     PlanEnvelope,
     envelope_for_plan,
@@ -73,9 +95,14 @@ __all__ = [
     "CONFINEMENT_KINDS",
     "IEC_MIN_OPERATING_KV",
     "KIND_BY_IDENTIFIER",
+    "LEVEL0_NON_CLAIMS",
+    "LEVEL0_SCHEMA",
+    "LEVEL0_SCHEMA_VERSION",
     "OWNED_CONFIGURATIONS",
     "POLYWELL_MIN_COILS",
+    "SYMMETRIC_GRIDS",
     "CandidateProfile",
+    "CathodeGridDeclaration",
     "ClockKind",
     "ClockModel",
     "ClockRelation",
@@ -89,19 +116,33 @@ __all__ = [
     "DiagnosticPlanError",
     "ElectrostaticDrive",
     "FrameKind",
+    "Level0Physics",
     "ObservabilityBinding",
     "ObservabilityClass",
+    "OperatingPoint",
     "PlanEnvelope",
     "ReferenceFrame",
     "RegistryBinding",
     "SemanticCarrier",
+    "SymmetricGrid",
     "__version__",
+    "bridge_half_angle_rad",
+    "circular_aperture_radius_m",
+    "circular_transparency",
     "configuration_from_bytes",
     "configuration_from_record",
     "envelope_for_plan",
     "envelope_from_bytes",
     "envelope_from_record",
+    "geometric_transparency",
+    "globe_aperture_count",
+    "level0_physics",
+    "maximum_ion_passes",
+    "normalised_circular_transparency",
     "plan_from_bytes",
     "plan_from_record",
+    "spherical_cap_area_m2",
+    "symmetric_grid",
+    "symmetric_grid_aperture_angle_deg",
     "verify_envelope",
 ]

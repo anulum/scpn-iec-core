@@ -23,14 +23,19 @@ configurations of the SCPN Phase Orchestrator reactor registry:
 (electrostatically biased magnetic cusp).
 
 **Evidence maturity: `computational_prototype`** (per-capability; ADR 0002).
-Two capabilities are implemented: the device configuration model —
+Three capabilities are implemented: the device configuration model —
 validated parameter objects with documented consistency estimates,
 canonical serialisation, and a data-only SPO registry pin
-(evidence: `VALIDATION.md#device-configuration-model`) — and the
+(evidence: `VALIDATION.md#device-configuration-model`); the
 diagnostic and clock semantics model — synthetic channel and clock
 declarations aligned fail-closed with the pinned SPO observability
 catalogue (ADR 0003, evidence:
-`VALIDATION.md#diagnostic-and-clock-semantics`). No parameter set or
+`VALIDATION.md#diagnostic-and-clock-semantics`); and level-0 device
+physics — the published closed-form geometry of a spherical cathode
+grid, its aperture count, transparency metrics and the geometric bound
+those place on ion recirculation, evaluated on a declared grid and
+anchored on values filed sources print (ADR 0005, evidence:
+`VALIDATION.md#level-0-device-physics`). No parameter set or
 channel describes any real machine or diagnostic; the claim inventory
 is empty and verified by the domain validator.
 

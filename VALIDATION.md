@@ -213,3 +213,89 @@ gate:
   domain (`clk_facility` root, `clk_shot` member); multi-domain rules
   are exercised by test-constructed plans. Scopes are declarations;
   `mapping_state` stays `unmapped`.
+
+## Level-0 device physics
+
+Evidence record of the `level0_device_physics` capability
+(`computational_prototype`; design record:
+`docs/adr/0005-level0-device-physics.md`).
+
+What is exercised, all under the 100 % statement-and-branch coverage gate:
+
+- The closed-form geometry of a spherical cathode grid, in the forms a
+  filed open-access source prints: the bridge half-angle
+  `arctan(t_bridge / D_grid)`, the globe-grid aperture count
+  `2 n_long (n_lat + 1)`, the four permissible symmetric grids with the
+  rule `360 deg / (2 n)` for their varying aperture angle, the geometric
+  transparency as the aperture area over the sphere area, the circular
+  transparency of the largest circles the apertures admit, and their
+  ratio.
+- The often-quoted bound `eta / (1 - eta**2)` on how many passes an ion
+  may make through a grid of transparency `eta`, refused outside the
+  open interval — a grid of zero transparency passes nothing, and a
+  transparency of exactly one is the polywell's virtual cathode, which
+  bounds no number of passes at all.
+- A composed record that requires a grid declaration for the gridded
+  class and refuses one for the polywell class, in both directions and
+  by name.
+- Where per-aperture areas are declared, the record recomputes the
+  geometric transparency and reports it beside the transparency the
+  configuration declares. Neither is derived from the other; a test
+  moves one and watches the other stand still.
+- Per-aperture measurements are refused unless there is exactly one
+  entry per aperture the ring counts imply, which binds the declared
+  measurements to the grid they are said to describe.
+- Canonical serialisation (sorted keys, NaN/infinity rejected) and
+  SHA-256 digest identity of the record.
+
+Anchors — printed values reproduced, and nothing further:
+
+- All four bridge angles of the source's grid-angle table, to the three
+  decimals it prints.
+- The aperture count printed in the caption of its globe-grid figure,
+  and both endpoints of the 8-to-220 range it states for the globe
+  family it analyses.
+- Every row of its symmetric-grid table, whose varying angle follows
+  from the stated crossing rule, and two of whose aperture counts the
+  same paper states a second time from two other laboratories.
+- The identity it states for grids with circular apertures, whose
+  normalised circular transparency is exactly one.
+- A nine-ring symmetric cathode, which one filed source reports as built
+  and operated at a named laboratory, reports the 48 apertures the other
+  source tabulates for that ring count. The number crosses two
+  independent documents.
+
+Measured, rather than assumed:
+
+- The bridge angle table cannot settle the form of its own equation:
+  dropping the arctangent reproduces all four printed angles to the
+  digit. Only the printed equation carries the tangent, and a test
+  records that the table is no corroboration of the choice.
+- The pass-count denominator is evaluated factored rather than as the
+  printed difference of squares. Over 20029 transparencies the two forms
+  disagree at 7994 of them, the worst by 5.5e-10 relative, because
+  subtracting a square from one cancels the significand near one.
+- Composing the circular-aperture and spherical-cap equations agrees
+  with their single-step form to 8.4e-15 relative rather than exactly,
+  measured over the admissible angle range.
+- A spherical cap whose base is the sphere radius falls one unit in the
+  last place below half the sphere, at every one of 499 radii measured,
+  because `cos(asin(1))` is 6.12e-17 rather than zero.
+
+Bounded claims — what is NOT claimed:
+
+- No value describes, approximates, or validates any real machine. An
+  anchor reproduces a number a filed source prints and nothing further.
+- The pass-count bound rests on transparency alone. It sees no pressure,
+  charge exchange, scattering or ion energy, and the same source states
+  that most such devices operate where an ion makes only a few passes
+  before charge exchange ends its life. It is an upper bound set by
+  geometry, never a predicted pass count.
+- Aperture areas and neighbour half-angles are declared inputs, measured
+  off a grid model this repository does not build.
+- The polywell's virtual cathode is a declaration here, not a field
+  calculation; no magnetic geometry is computed anywhere in this
+  package.
+- No fusion rate, neutron yield, sheath, space-charge or transport
+  result is computed, and no experimental correlation exists in this
+  repository.
