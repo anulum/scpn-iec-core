@@ -12,6 +12,14 @@ SCPN IEC Core — CHANGELOG
 
 ## [Unreleased]
 
+### Changed
+
+- Install every CI dependency from hash-locked requirement sets with
+  `--require-hashes`: the development toolchain, the audit and inventory
+  tools. `make lock` regenerates the sets; the package itself installs with
+  `--no-deps`. Toolchain, action and interpreter pins move to their newest
+  releases.
+
 ### Added
 
 - Diagnostic-plan depth: per-channel signal inventories, frame
