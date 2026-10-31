@@ -25,6 +25,13 @@ SCPN IEC Core — CHANGELOG
 
 ### Changed
 
+- Local and hosted gates check the same cohorts: `make typecheck` now checks
+  `src/` as CI does, `make test` measures `src/` as CI does, `conftest.py`
+  joins the typed cohort everywhere, and `make validate` runs the workflow
+  audit. A parity test binds the make targets and the preflight plan to the
+  hosted workflows, and an enrollment test maps every tracked file to exactly
+  one gated surface.
+
 - Install every CI dependency from hash-locked requirement sets with
   `--require-hashes`: the development toolchain, the audit and inventory
   tools. `make lock` regenerates the sets; the package itself installs with
