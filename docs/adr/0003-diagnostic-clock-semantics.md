@@ -57,9 +57,8 @@ and `model.synthetic_oscillator_coordinate` (numerical only).
    an electrostatic bunching band of 10 kHz–10 MHz, an RF drive band of 1
    MHz–200 GHz and a ~1000 s run-duration bound. An earlier version credited
    them to R. L. Hirsch, J. Appl. Phys. 38 (1967) 4522, which is not on file
-   and describes a DC gridded device (the filed Radel 2007 and Wulfkühler
-   2024 print no such bands), so they were never checked against it
-   (attribution removed 2026-10-31).
+   (the filed Radel 2007 and Wulfkühler 2024 print no such bands), so they
+   were never checked against it (attribution removed 2026-10-31).
 5. The reference plan mirrors canonical practice with synthetic
    declarations: an electrostatic-bunching probe (derived cyclic), a
    steady-state potential/current set and a loss-profile set
