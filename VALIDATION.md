@@ -127,10 +127,13 @@ What is exercised, all under the 100 % statement-and-branch coverage gate:
   loss-profile set, interchange probe array, and synthetic oscillator,
   each bound to its clock domain; the open.* candidates are recorded as
   polywell-scoped exactly as in the catalogue.
-- Documented advisory band checks with their sources stated in the
-  code: electrostatic bunching in the 10 kHz–10 MHz scale and RF drive
-  frequencies of 1 MHz–200 GHz (Hirsch 1967); findings are reported,
-  never clamped.
+- Advisory checks against declared synthetic design bounds: an electrostatic
+  bunching band of 10 kHz–10 MHz, an RF drive band of 1 MHz–200 GHz and a
+  ~1000 s run-duration bound. They were earlier credited to R. L. Hirsch, J.
+  Appl. Phys. 38 (1967) 4522, which is not on file and describes a DC
+  gridded device (the filed Radel 2007 and Wulfkühler 2024 print no such
+  bands), so they were never checked against it; the attribution was removed
+  (2026-10-31). Findings are reported, never clamped.
 - Canonical serialisation (sorted keys, NaN/infinity rejected on both
   emit and parse), SHA-256 digest identity, and a strict round-trip
   parser that refuses unknown fields.

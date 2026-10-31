@@ -418,8 +418,9 @@ class DiagnosticPlan:
                         message=(
                             "declared bunching band "
                             f"{channel.max_signal_frequency_hz:.1f} "
-                            "Hz is outside the electrostatic bunching "
-                            "scale 10 kHz-10 MHz (Hirsch 1967)"
+                            "Hz is outside the declared electrostatic "
+                            "bunching design band 10 kHz-10 MHz (synthetic; "
+                            "not checked against a source on file)"
                         ),
                     )
                 )
@@ -432,9 +433,9 @@ class DiagnosticPlan:
                         message=(
                             "declared drive frequency "
                             f"{channel.max_signal_frequency_hz:.1f} "
-                            "Hz is outside the RF drive range "
-                            "1 MHz-200 GHz used on electrostatic devices "
-                            "(Hirsch 1967)"
+                            "Hz is outside the declared RF drive design "
+                            "band 1 MHz-200 GHz (synthetic; not checked "
+                            "against a source on file)"
                         ),
                     )
                 )
@@ -445,8 +446,9 @@ class DiagnosticPlan:
                         message=(
                             "acquisition window "
                             f"{channel.acquisition_duration_s:.2e} s is "
-                            "longer than the IEC steady-run scale of up to "
-                            "~1000 s (Hirsch 1967)"
+                            "longer than the declared ~1000 s run-duration "
+                            "bound (synthetic; not checked against a source "
+                            "on file)"
                         ),
                     )
                 )
