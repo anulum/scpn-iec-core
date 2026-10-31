@@ -110,3 +110,11 @@ and the ring structure of the cathode it was operated with.
   cage are tori, and every longitude ring lies in a plane the library
   cannot yet place a body in. That is recorded against the rollout goal,
   not resolved here.
+
+## Amendment 2026-10-31
+
+The context above says Hirsch (1967) supplies the ion-energy relation.
+That article is not on file and was never read; the relation ``E = e U``
+is now stated as energy conservation (ADR 0002 amendment of the same
+date), and the device descriptions are bound to the filed Radel (2007)
+thesis. No computation changed.

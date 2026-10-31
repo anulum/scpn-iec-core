@@ -96,6 +96,7 @@ def test_consistency_report_clean_and_finding() -> None:
     findings = weak.consistency_report()
     assert len(findings) == 1
     assert "operating floor" in findings[0].message
+    assert "declared IEC operating floor" in findings[0].message
 
 
 def test_canonical_round_trip_and_digest() -> None:

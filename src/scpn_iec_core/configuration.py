@@ -11,12 +11,15 @@
 A :class:`DeviceConfiguration` composes a validated confinement
 structure and electrostatic drive under exactly one of the two registry
 identifiers this repository owns. The grid/virtual-cathode class
-invariants are hard (Hirsch, JAP 38 (1967) 4522; Bussard's polywell
-line); a well voltage below the documented IEC operating range is
-flagged. Serialisation is canonical (sorted keys, no NaN or infinity
-accepted anywhere) and the SHA-256 digest of those bytes identifies the
-exact parameter set. The registry binding is a data pin only — this
-package never imports SCPN Phase Orchestrator code.
+invariants are hard: the filed thesis R. F. Radel, UWFDM-1325 (2007),
+PDF pp. 21-22 (printed pp. 6-7), describes the gridded device with its
+cathode grid and Bussard's grid-less polywell, whose cusp magnetic
+fields form an electron cloud that acts as the cathode. A well voltage
+below the declared operating floor is flagged. Serialisation is
+canonical (sorted keys, no NaN or infinity accepted anywhere) and the
+SHA-256 digest of those bytes identifies the exact parameter set. The
+registry binding is a data pin only — this package never imports SCPN
+Phase Orchestrator code.
 """
 
 from __future__ import annotations
@@ -162,7 +165,7 @@ class DeviceConfiguration:
                     field="drive.well_voltage_kv",
                     message=(
                         f"well voltage {voltage:.1f} kV is below the "
-                        f"documented IEC operating floor "
+                        f"declared IEC operating floor "
                         f"{IEC_MIN_OPERATING_KV:.0f} kV"
                     ),
                 )

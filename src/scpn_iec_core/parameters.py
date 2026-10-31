@@ -10,7 +10,8 @@
 
 The derived quantity implements one standard result and nothing more:
 the maximum singly-charged ion energy ``E = e U`` of the electrostatic
-well (R. L. Hirsch, J. Appl. Phys. 38 (1967) 4522). It is a rough
+well (energy conservation for one elementary charge falling through the
+well potential ``U``). It is a rough
 consistency instrument with documented applicability bounds; no claim
 about any real machine follows from it.
 """
@@ -183,6 +184,6 @@ class ElectrostaticDrive:
         -------
         float
             ``E = e U`` in kiloelectronvolts — numerically equal to the
-            well voltage in kilovolts (Hirsch, JAP 38 (1967) 4522).
+            well voltage in kilovolts (energy conservation).
         """
         return self.well_voltage_kv

@@ -80,11 +80,13 @@ What is exercised, all under the 100 % statement-and-branch coverage gate:
   `ElectrostaticDrive`, `DeviceConfiguration`) rejecting non-finite
   values, non-positive extents, and the hard class invariants: a
   physical cathode grid with transparency strictly inside (0, 1) and no
-  magnetic coils for `gridded_iec` (Hirsch, J. Appl. Phys. 38 (1967)
-  4522), and at least six polyhedral coils with no physical grid for
-  `polywell` — every rejection branch is tested.
+  magnetic coils for `gridded_iec`, and at least six polyhedral coils
+  with no physical grid for `polywell` (both device types as described
+  in the filed Radel 2007 thesis, PDF pp. 21-22; the six-coil minimum
+  is declared; the earlier Hirsch 1967 credit, not on file, was removed
+  on 2026-10-31) — every rejection branch is tested.
 - The ion-energy relation `E = e U` as a documented derived quantity,
-  with an advisory finding for well voltages below the documented IEC
+  with an advisory finding for well voltages below the declared IEC
   operating floor 20 kV, reported and never clamped.
 - Canonical serialisation (sorted keys, NaN/infinity rejected on both
   emit and parse), SHA-256 digest identity, and a strict round-trip

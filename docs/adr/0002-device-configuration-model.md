@@ -35,16 +35,19 @@ follow the family pilot.
    parameter set is a synthetic test fixture.
 3. Hard class invariants: `gridded_iec` requires a physical cathode
    grid — transparency strictly inside ``(0, 1)`` — and no magnetic
-   coils (R. L. Hirsch, J. Appl. Phys. 38 (1967) 4522); `polywell`
-   requires at least six polyhedral coils forming the virtual cathode
-   and a transparency of exactly one (no physical grid intercepts —
-   the defining feature of the concept; R. W. Bussard's polywell line).
+   coils; `polywell` requires at least six polyhedral coils forming the
+   virtual cathode and a transparency of exactly one (no physical grid
+   intercepts). The filed thesis R. F. Radel, UWFDM-1325 (2007), PDF
+   pp. 21-22 (printed pp. 6-7), describes both: the gridded device with
+   its cathode grid, and Bussard's grid-less polywell, whose cusp
+   magnetic fields form an electron cloud that acts as the cathode. The
+   minimum of six coils is declared.
 4. Derived quantity: the maximum singly-charged ion energy
    ``E = e U`` (``ion_energy_kev`` equals the well voltage in
    kilovolts). Advisory finding, reported by `consistency_report()`
-   and never clamped: a well voltage below ``20 kV`` — beneath the
-   documented operating range of IEC neutron-production experiments
-   (Hirsch 1967 operated near 100 kV).
+   and never clamped: a well voltage below a declared ``20 kV`` floor.
+   The filed Radel (2007) thesis reports Hirsch's tabletop D-T result at
+   a cathode voltage of 150 kV (PDF p. 21, printed p. 6).
 5. Repository-level `evidence_maturity` = the highest state claimed by
    any capability entry; per-capability states are the authoritative
    claim surface.
@@ -62,3 +65,13 @@ follow the family pilot.
 - Later lanes (well/convergence/yield diagnostic semantics, safety
   envelope) build on these types; maturity advances per capability only
   with the evidence the family standard requires.
+
+## Amendment 2026-10-31
+
+The class invariants, the ion-energy relation and the voltage floor were
+credited to R. L. Hirsch, J. Appl. Phys. 38 (1967) 4522, which is not on
+file. The earlier text also said that Hirsch operated near 100 kV; the
+filed Radel (2007) thesis reports 150 kV (PDF p. 21, printed p. 6). The
+invariants are now bound to Radel's description of the gridded and
+polywell devices, the ion energy is stated as energy conservation, and
+the 20 kV floor is named declared. No invariant, value or check changed.
