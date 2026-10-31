@@ -88,6 +88,8 @@ SCPN-CONTROL ──admitted ControlAction──► independent machine protectio
 | `studio/portfolio-descriptor.json` | derived Studio descriptor, `not_federated` |
 | `capability-inventory.json` | generated inventory of the three implemented capabilities |
 | `src/scpn_iec_core/` | the package: configuration model, observability, plan envelope and level-0 physics |
+| `benchmarks/` | level-0 physics benchmark and its committed local artefact |
+| `docs/benchmarks.md` | computation contract of the level-0 kernels, backend status and measured numbers |
 | `docs/CONTROL_ADAPTER_SPECIFICATION.md` | device-owned adapter contract |
 | `docs/THREAT_MODEL.md` | assets, trust boundaries, misuse paths |
 | `docs/adr/0001-repository-boundary.md` | boundary decision record |
