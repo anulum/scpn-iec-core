@@ -39,6 +39,12 @@ SCPN IEC Core — CHANGELOG
 
 ### Changed
 
+- The ion-transit documentation and the bounded claims no longer attribute
+  to the grid-geometry paper a statement it does not print (that an ion
+  makes only a few passes before charge exchange); charge exchange is now
+  cited from the thesis that describes it, without a pass count. The test
+  fixtures name the page of every printed anchor. No value changes.
+
 - `scpn_iec_core.observability` is now a package with one module per
   responsibility — vocabulary, catalogue binding, frames, clocks, signals and
   channels, plan composition, record parsing — behind the unchanged public

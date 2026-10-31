@@ -288,10 +288,10 @@ Bounded claims — what is NOT claimed:
 - No value describes, approximates, or validates any real machine. An
   anchor reproduces a number a filed source prints and nothing further.
 - The pass-count bound rests on transparency alone. It sees no pressure,
-  charge exchange, scattering or ion energy, and the same source states
-  that most such devices operate where an ion makes only a few passes
-  before charge exchange ends its life. It is an upper bound set by
-  geometry, never a predicted pass count.
+  charge exchange, scattering or ion energy; charge exchange with the
+  background gas is one of the fates of an ion that the second filed
+  source describes. It is an upper bound set by geometry, never a
+  predicted pass count.
 - Aperture areas and neighbour half-angles are declared inputs, measured
   off a grid model this repository does not build.
 - The polywell's virtual cathode is a declaration here, not a field

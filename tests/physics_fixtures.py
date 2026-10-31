@@ -40,7 +40,7 @@ from scpn_iec_core.parameters import ConfinementStructure, ElectrostaticDrive
 from scpn_iec_core.physics.level0 import CathodeGridDeclaration
 from scpn_iec_core.physics.transparency import sphere_area_m2
 
-# --- Wulfkühler et al. 2024, Table 2: bridge ratio and its printed angle ---
+# --- Wulfkühler et al. 2024, Table 2 (p. 9): bridge ratio and its angle ---
 # The paper prints each angle to three decimals in degrees.
 PRINTED_BRIDGE_ANGLES_DEG: Final = (
     (1.0, 50.0, 1.146),
@@ -50,19 +50,19 @@ PRINTED_BRIDGE_ANGLES_DEG: Final = (
 )
 PRINTED_BRIDGE_ANGLE_DECIMALS: Final = 3
 
-# --- Wulfkühler et al. 2024, equation 12 and the text around it ---
-# Figure 11's caption states the aperture count of the grid it draws.
+# --- Wulfkühler et al. 2024, equation 12 (p. 11) and the text around it ---
+# Figure 11's caption (p. 12) states the aperture count of the grid it draws.
 PRINTED_FIGURE11_RINGS: Final = (4, 5)
 PRINTED_FIGURE11_APERTURES: Final = 50
 # "only globe grids with n_lat = n_long and n_lat = n_long - 1 in the range
 # of n_long 2 to 10 will be considered. This provides grids with 8 to 220
-# apertures" — the two endpoints of that stated range.
+# apertures" (p. 12) — the two endpoints of that stated range.
 PRINTED_GLOBE_FAMILY_RANGE: Final = ((1, 2, 8), (10, 10, 220))
-# Fancher's cathode, cited in the paper's review of experimental grids.
+# Fancher's cathode, cited in the paper's review of experimental grids (p. 4).
 PRINTED_FANCHER_RINGS: Final = (9, 32)
 PRINTED_FANCHER_APERTURES: Final = 640
 
-# --- Wulfkühler et al. 2024, Table 3: the four symmetric grids ---
+# --- Wulfkühler et al. 2024, Table 3 (p. 14): the four symmetric grids ---
 PRINTED_SYMMETRIC_GRIDS: Final = (
     (3, 8, 2, 90.0),
     (6, 24, 3, 60.0),
@@ -70,17 +70,19 @@ PRINTED_SYMMETRIC_GRIDS: Final = (
     (15, 120, 5, 36.0),
 )
 # The same paper's review of experiments states two of those counts a
-# second time, from two different laboratories, which is why the table is
+# second time (p. 4), from two different laboratories, which is why the table is
 # read as corroborated rather than merely transcribed.
 PRINTED_CORROBORATED_SYMMETRIC: Final = ((6, 24), (9, 48))
 
 # --- Radel, UWFDM-1325: the University of Wisconsin-Madison IEC device ---
-# Section 4.1.2, pages 69 to 72.
+# Section 4.1.2, printed pages 69 to 72 (PDF 84 to 87): cathode diameter
+# p. 69, wire p. 70, nine-ring symmetric cathode p. 71, anode p. 72.
 RADEL_CATHODE_DIAMETER_M: Final = 0.20
 RADEL_CATHODE_WIRE_DIAMETER_M: Final = 0.00075
 RADEL_ANODE_DIAMETER_M: Final = 0.40
 RADEL_SYMMETRIC_CATHODE_RINGS: Final = 9
-# Section 4.1, page 66: the cylindrical aluminium vacuum chamber.
+# Section 4.1, printed page 66 (PDF 81): the cylindrical aluminium vacuum
+# chamber.
 RADEL_CHAMBER_DIAMETER_M: Final = 0.91
 RADEL_CHAMBER_HEIGHT_M: Final = 0.65
 

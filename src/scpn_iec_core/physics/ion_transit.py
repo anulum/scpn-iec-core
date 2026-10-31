@@ -10,16 +10,16 @@
 
 One relation, the estimate of how many passes an ion can make through a
 grid before it is intercepted, taken from equation 1 of Wulfkühler et
-al., *Scientific Reports* **14**:2261 (2024), which cites it as an often
-quoted result resting on the transparency alone.
+al., *Scientific Reports* **14**:2261 (2024), p. 4, which cites it as an
+often quoted result resting on the transparency alone.
 
 It rests on the transparency alone, and that is the whole of its
 applicability. It knows nothing about pressure, charge exchange, angular
-scattering or the ion's energy, and the same source states plainly that
-most IEC devices operate in a pressure range where an ion makes only a
-few passes before charge exchange ends its life — a limit this relation
-cannot see. Treat it as an upper bound set by geometry, never as a
-predicted pass count.
+scattering or the ion's energy. Charge exchange with the background gas
+is one of the fates an ion meets on its way through the well (Radel,
+UWFDM-1325, 2007, section 3.1, printed p. 38), and this relation cannot
+see it. Treat it as an upper bound set by geometry, never as a predicted
+pass count.
 
 The denominator is evaluated as ``(1 - eta) * (1 + eta)`` rather than as
 the printed ``1 - eta**2``. The two are the same algebra and not the same
