@@ -68,7 +68,7 @@ SCHEMA: Final = "scpn-iec-core.level0-physics-benchmark.v1"
 NATIVE_STATUS: Final = (
     "unavailable: this package has no native crate; the level-0 kernels use "
     "+ - * /, math.fsum and the platform atan, sin, asin and cos, and the "
-    "native decision of audit plan Q01 awaits the owner"
+    "decision on a native backend is open with the project owner"
 )
 SYNTHETIC_TRANSPARENCY: Final = 0.95
 SYNTHETIC_GRID_DIAMETER_M: Final = 0.20
