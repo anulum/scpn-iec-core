@@ -11,7 +11,7 @@
 Every image is original generated artwork derived from this repository's
 own domain surface — the electrostatic potential well with converging
 ions, the gridded-versus-polywell class split drawn at the repository's
-own minimum coil count, and the documented well-voltage range. The
+own minimum coil count, and the declared well-voltage floor. The
 right-hand text panel states only facts backed by the repository
 itself.
 
@@ -22,7 +22,7 @@ Outputs (written next to this script):
 - ``repo_header_class_split.png`` — the physical grid cathode beside
   the polywell virtual cathode.
 - ``repo_header_voltage_range.png`` — well depth against voltage with
-  the documented operating floor.
+  the declared operating floor.
 
 Generation-time tooling only: requires ``numpy`` and ``matplotlib``,
 which are deliberately not part of the pinned development lock. Run as
@@ -55,7 +55,7 @@ TITLE_METRICS: list[tuple[str, str]] = [
     ("Device Configurations", "gridded_iec · polywell"),
     ("Class Invariants", "grid vs virtual cathode, hard"),
     ("Polywell Rule", "at least six confinement coils"),
-    ("Voltage Gate", "below documented range flagged"),
+    ("Voltage Gate", "below declared floor flagged"),
     ("Plan Envelope", "v1.1.0 · synthetic · review-only"),
     ("Quality Gates", "100% branch cov · mypy --strict"),
 ]
@@ -377,7 +377,7 @@ def generate_class_split() -> None:
     ax.text(
         centre,
         -2.2,
-        "Hirsch, JAP 38 (1967) 4522",
+        "Radel, UWFDM-1325 (2007)",
         color="#445566",
         fontsize=7.5,
         fontfamily="monospace",
@@ -500,7 +500,7 @@ def generate_voltage_range() -> None:
     ax.text(
         floor_x,
         9.25,
-        "documented IEC operating range starts here",
+        "declared IEC operating floor starts here",
         color=MAGENTA,
         fontsize=8.5,
         fontfamily="monospace",
@@ -523,7 +523,7 @@ def generate_voltage_range() -> None:
     ax.text(
         6.6,
         3.3,
-        "documented range",
+        "declared range",
         color=GREEN,
         fontsize=8.5,
         fontfamily="monospace",
@@ -549,14 +549,14 @@ def generate_voltage_range() -> None:
     ax.text(
         5.0,
         0.75,
-        "a declared well voltage below the documented range is "
+        "a declared well voltage below the declared floor is "
         "flagged, never silently accepted",
         color="#445566",
         fontsize=8,
         fontfamily="monospace",
         ha="center",
     )
-    _text_panel(fig, "Depth With A Documented Floor")
+    _text_panel(fig, "Depth With A Declared Floor")
     _save(fig, plt, "repo_header_voltage_range.png")
 
 
