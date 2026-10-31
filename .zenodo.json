@@ -1,6 +1,6 @@
 {
   "title": "SCPN IEC Core",
-  "description": "Governed device-family repository for the gridded IEC and Polywell configurations within the SCPN Reactor Systems Research Group. Currently architecture-only: boundary contracts, CONTROL adapter specification, and validation tooling, with no implemented reactor capability.",
+  "description": "Governed device-family repository for the gridded IEC and Polywell configurations within the SCPN Reactor Systems Research Group. Evidence maturity computational_prototype with three implemented capabilities: a validated device configuration model with documented consistency estimates, diagnostic and clock semantics aligned with the SCPN Phase Orchestrator observability catalogue, and level-0 device physics of a declared spherical cathode grid (its geometry, aperture count, transparency and the geometric bound on ion recirculation). All parameter sets are synthetic; no real machine is described, and the claim inventory is empty.",
   "upload_type": "software",
   "access_right": "open",
   "license": "AGPL-3.0-or-later",
