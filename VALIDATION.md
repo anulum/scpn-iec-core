@@ -27,8 +27,9 @@ followed by the evidence record of each implemented capability.
 | Licensing | `reuse lint` | REUSE 3.x compliance of the full tree |
 | Workflow lint | `actionlint` | all files under `.github/workflows/` |
 | Workflow modularity | `python3 tools/audit_workflows.py` | distributed workflow inventory: single ownership per job, coordinator/gate contract, action pinning, size ceilings |
-| Documentation | `python3 tools/preflight.py --only docs` | UTF-8 readability and relative-link integrity of every Markdown file |
+| Documentation | `python3 tools/preflight.py --only docs` | UTF-8 readability and relative-link integrity of every Markdown file git would publish |
 | Orchestrated | `python3 tools/preflight.py` | fail-closed run of all gates above |
+| Installed wheel (CI only) | `python -I tools/installed_package_check.py --checkout <checkout>` in a clean environment holding only the built wheel | package imported from site-packages, `py.typed` shipped, metadata version and no runtime requirement, configuration/plan/envelope round trip and envelope verification through the installed parsers |
 
 ## Workflow gates
 
